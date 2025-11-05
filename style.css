@@ -191,38 +191,38 @@ body {
     letter-spacing: 1px;
 }
 
-/* Image Section Styles - УВЕЛИЧЕНА ШИРИНА */
+/* Image Section Styles - УВЕЛИЧЕНА ШИРИНА И ВЫСОТА */
 .image-section {
     padding: 40px 0;
     background: #000000;
     text-align: center;
+    width: 100%;
 }
 
 .content-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px #B8860B;
-    
-    /* Увеличенная ширина для десктопов */
     width: 100%;
-    max-width: 1200px; /* Увеличено с предыдущего значения */
-    margin: 0 auto;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+    object-fit: cover;
     display: block;
+    margin: 0 auto;
 }
 
 /* Специальные стили для больших экранов */
 @media (min-width: 1200px) {
     .content-image {
-        max-width: 1400px; /* Еще больше на очень широких экранах */
-        width: 95%; /* Занимает 95% ширины контейнера */
+        max-width: 1400px;
+        width: 95%;
+        height: 500px; /* Фиксированная высота для десктопов */
     }
 }
 
 @media (min-width: 1400px) {
     .content-image {
-        max-width: 1600px; /* Максимальная ширина для огромных экранов */
+        max-width: 1600px;
         width: 90%;
+        height: 550px; /* Увеличиваем высоту на очень широких экранах */
     }
 }
 
@@ -1002,7 +1002,7 @@ body {
     transform: translateY(0);
 }
 
-/* Адаптивность для мобильных устройств */
+/* Адаптивность для мобильных устройств - ПЕРЕРАБОТАНА ДЛЯ КАРТИНКИ */
 @media (max-width: 1200px) {
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1027,10 +1027,11 @@ body {
         font-size: 2.5rem;
     }
     
-    /* Для планшетов - немного уменьшаем картинку */
+    /* Для планшетов - увеличиваем картинку */
     .content-image {
-        max-width: 1000px;
-        width: 90%;
+        max-width: 1100px;
+        width: 95%;
+        height: 400px; /* Увеличиваем высоту */
     }
 }
 
@@ -1044,8 +1045,9 @@ body {
     }
     
     .content-image {
-        max-width: 900px;
+        max-width: 1000px;
         width: 95%;
+        height: 380px;
     }
 }
 
@@ -1076,8 +1078,9 @@ body {
     }
     
     .content-image {
-        max-width: 800px;
+        max-width: 900px;
         width: 100%;
+        height: 350px;
     }
 }
 
@@ -1277,9 +1280,20 @@ body {
         font-size: 1.3rem;
     }
     
+    /* УВЕЛИЧИВАЕМ КАРТИНКУ НА МОБИЛЬНЫХ */
     .content-image {
-        max-width: 700px;
+        max-width: 100%;
         width: 100%;
+        height: 300px; /* Увеличиваем высоту на мобильных */
+        border-radius: 12px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .image-section {
+        padding: 30px 0;
+        margin: 0 -10px; /* Убираем боковые отступы для полной ширины */
+        width: calc(100% + 20px);
     }
 }
 
@@ -1463,9 +1477,20 @@ body {
         font-size: 1.2rem;
     }
     
+    /* ЕЩЕ БОЛЬШЕ УВЕЛИЧИВАЕМ КАРТИНКУ НА МАЛЕНЬКИХ ЭКРАНАХ */
     .content-image {
         max-width: 100%;
         width: 100%;
+        height: 250px; /* Оптимальная высота для маленьких экранов */
+        border-radius: 10px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .image-section {
+        padding: 20px 0;
+        margin: 0 -15px; /* Еще больше убираем боковые отступы */
+        width: calc(100% + 30px);
     }
 }
 
@@ -1474,6 +1499,7 @@ body {
     .content-image {
         max-width: 1800px;
         width: 85%;
+        height: 600px; /* Увеличиваем высоту на огромных экранах */
     }
 }
 
@@ -1481,5 +1507,34 @@ body {
     .content-image {
         max-width: 2000px;
         width: 80%;
+        height: 650px;
+    }
+}
+
+/* Дополнительные стили для очень маленьких устройств */
+@media (max-width: 360px) {
+    .content-image {
+        height: 220px; /* Немного уменьшаем для очень маленьких экранов */
+        border-radius: 8px;
+    }
+    
+    .image-section {
+        padding: 15px 0;
+        margin: 0 -10px;
+        width: calc(100% + 20px);
+    }
+}
+
+/* Портретная ориентация на мобильных */
+@media (max-width: 768px) and (orientation: portrait) {
+    .content-image {
+        height: 280px; /* Увеличиваем высоту в портретной ориентации */
+    }
+}
+
+/* Ландшафтная ориентация на мобильных */
+@media (max-width: 768px) and (orientation: landscape) {
+    .content-image {
+        height: 200px; /* Уменьшаем высоту в ландшафтной ориентации */
     }
 }
