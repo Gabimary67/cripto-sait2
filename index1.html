@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webze - Crypto Leverage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <!-- Бейдж с текстом -->
+                    <div class="hero-badge">
+                        <span class="badge-built">XChanges</span>
+                        <span class="badge-divider">•</span>
+                        <span class="badge-powered">Trade with us</span>
+                    </div>
+                    
+                    <!-- Основной заголовок -->
+                    <h1 class="hero-title">
+                        Exchange your crypto quickly, 
+                        <span class="title-leverage">safely</span>
+                        and at the best rate
+                    </h1>
+                    
+                    <!-- Подзаголовок -->
+                    <p class="hero-subtitle">
+                        The XChanges.Pro service is a convenient way to exchange USDT, BTC, ETH, and other currencies for cash or vice versa.
+                        No intermediary fees, no delays, and guaranteed privacy.                        
+                    </p>
+                    
+                    <!-- Кнопка действия -->
+                    <div class="hero-actions">
+                        <a href="tg://resolve/?domain=Richiiee_Ri" class="cta-button" onclick="trackFacebookLead()">Go to the Telegram bot</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section" id="features">
+            <div class="container">
+                <div class="features-header">
+                    <h2 class="section-title">Accessible to all</h2>
+                    <p class="section-subtitle">Advantages of working with us</p>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="features-grid">
+                    <!-- Feature 1 - Молния -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="feature-title">Quickly</h3>
+                        <ul class="feature-list">
+                            <li>Exchange in 5-10 minutes — everything is automated and there are no waiting times.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Feature 2 - Щит -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Safely</h3>
+                        <ul class="feature-list">
+                            <li>Only trusted partners and secure transactions.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Feature 3 - Обмен валют -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3 class="feature-title">The best course</h3>
+                        <ul class="feature-list">
+                            <li>The rate is updated in real time, with no hidden fees.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Feature 4 - Рукопожатие -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="feature-title">Confidential</h3>
+                        <ul class="feature-list">
+                            <li>No unnecessary data, just exchange and results.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Кнопка CTA - вынесена из грида для центрирования -->
+                <div class="features-cta-container">
+                    <a href="tg://resolve/?domain=Richiiee_Ri" class="features-btn" onclick="trackFacebookLead()">
+                        <span class="btn-text">Calculate the exchange rate in the Telegram bot</span>
+                        <span class="btn-icon">
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-title">XChanges.Pro</h3>
+                    <p class="footer-tagline">Reliable cryptocurrency exchange at the best rate.</p>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-contact">
+                        <span class="contact-icon">📩</span>
+                        <span class="contact-text">Support: <a href="https://t.me/supportxchange" target="_blank" class="contact-link">@supportxchange</a></span>
+                    </div>
+                    <div class="footer-status">
+                        <span class="status-icon">⚙️</span>
+                        <span class="status-text">We work 24/7</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 XChanges.Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Функция для отслеживания конверсий Facebook Pixel
+        function trackFacebookLead() {
+            if (window.fbq) {
+                fbq('track', 'Lead');
+                console.log('Facebook Pixel: Lead event tracked');
+            } else {
+                console.log('Facebook Pixel not found');
+            }
+        }
+    </script>
+
+    <script src="script.js"></script>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+</body>
+</html>
